@@ -1,0 +1,38 @@
+04:51:07 **** Incremental Build of configuration Debug for project ADC_Test ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HCSR04_TRIG_PULSE':
+../Core/Src/main.c:218:42: error: 'TRIG_PIN_Pin' undeclared (first use in this function)
+  218 |                 HAL_GPIO_WritePin(GPIOC, TRIG_PIN_Pin, GPIO_PIN_SET);
+      |                                          ^~~~~~~~~~~~
+../Core/Src/main.c:218:42: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:249:3: warning: implicit declaration of function 'HAL_TIM_Base_Init' [-Wimplicit-function-declaration]
+  249 |   HAL_TIM_Base_Init(&htim3);
+      |   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:249:22: error: 'htim3' undeclared (first use in this function)
+  249 |   HAL_TIM_Base_Init(&htim3);
+      |                      ^~~~~
+../Core/Src/main.c:250:3: warning: implicit declaration of function 'HAL_TIM_Base_Start'; did you mean 'HAL_DMA_Start'? [-Wimplicit-function-declaration]
+  250 |   HAL_TIM_Base_Start(&htim3);
+      |   ^~~~~~~~~~~~~~~~~~
+      |   HAL_DMA_Start
+../Core/Src/main.c:251:3: warning: implicit declaration of function 'HAL_TIM_IC_Start_IT'; did you mean 'HAL_ADC_Start_IT'? [-Wimplicit-function-declaration]
+  251 |   HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_1);
+      |   ^~~~~~~~~~~~~~~~~~~
+      |   HAL_ADC_Start_IT
+../Core/Src/main.c:251:31: error: 'TIM_CHANNEL_1' undeclared (first use in this function); did you mean 'ADC_CHANNEL_1'?
+  251 |   HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_1);
+      |                               ^~~~~~~~~~~~~
+      |                               ADC_CHANNEL_1
+../Core/Src/main.c:264:11: error: 'time_diff' undeclared (first use in this function)
+  264 |           time_diff = 0;
+      |           ^~~~~~~~~
+../Core/Src/main.c:265:11: error: 'distance' undeclared (first use in this function)
+  265 |           distance = 0;
+      |           ^~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+04:51:08 Build Failed. 6 errors, 3 warnings. (took 1s.79ms)
+

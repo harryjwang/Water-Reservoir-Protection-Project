@@ -1,0 +1,10 @@
+10:04:11 **** Incremental Build of configuration Debug for project RPM_Test ****
+make -j4 all 
+arm-none-eabi-size  RPM_Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15788	     92	   2124	  18004	   4654	RPM_Test.elf
+Finished building: default.size.stdout
+ 
+
+10:04:11 Build Finished. 0 errors, 0 warnings. (took 523ms)
+

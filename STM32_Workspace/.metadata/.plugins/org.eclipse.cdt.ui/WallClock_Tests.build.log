@@ -1,0 +1,10 @@
+04:37:05 **** Incremental Build of configuration Debug for project WallClock_Tests ****
+make -j4 all 
+arm-none-eabi-size  WallClock_Tests.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14028	     92	   2188	  16308	   3fb4	WallClock_Tests.elf
+Finished building: default.size.stdout
+ 
+
+04:37:06 Build Finished. 0 errors, 0 warnings. (took 519ms)
+

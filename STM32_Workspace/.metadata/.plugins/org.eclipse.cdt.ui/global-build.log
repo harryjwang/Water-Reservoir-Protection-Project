@@ -1,0 +1,778 @@
+09:06:37 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-size  Reservoir_Project.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26848	     92	   2332	  29272	   7258	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+09:06:39 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-size  Reservoir_Project.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26848	     92	   2332	  29272	   7258	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+09:08:44 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-size  Reservoir_Project.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26848	     92	   2332	  29272	   7258	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+09:09:07 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-size  Reservoir_Project.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26848	     92	   2332	  29272	   7258	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+09:09:39 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-size  Reservoir_Project.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26848	     92	   2332	  29272	   7258	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+09:09:56 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-size  Reservoir_Project.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26848	     92	   2332	  29272	   7258	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+09:10:29 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-size  Reservoir_Project.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26848	     92	   2332	  29272	   7258	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+09:17:37 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:677:23: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  677 |                   if (i = 23){
+      |                       ^
+../Core/Src/main.c:694:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  694 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:533:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  533 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:533:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  533 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  27068	     92	   2332	  29492	   7334	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+09:19:05 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:677:23: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  677 |                   if (i = 23){
+      |                       ^
+../Core/Src/main.c:695:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  695 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:533:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  533 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:533:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  533 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  27068	     92	   2332	  29492	   7334	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+09:20:56 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:688:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  688 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:533:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  533 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:533:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  533 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  26848	     92	   2332	  29272	   7258	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+09:31:31 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:689:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  689 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:533:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  533 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:533:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  533 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  26844	     92	   2332	  29268	   7254	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+09:33:54 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:687:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  687 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:531:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:531:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  26852	     92	   2332	  29276	   725c	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+09:36:29 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:691:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  691 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:531:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:531:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  26864	     92	   2332	  29288	   7268	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+09:37:12 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:691:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  691 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:531:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:531:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  26864	     92	   2332	  29288	   7268	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+09:39:23 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:691:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  691 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:531:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:531:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  26864	     92	   2332	  29288	   7268	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+09:40:31 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:695:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  695 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:531:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:531:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  27084	     92	   2332	  29508	   7344	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+09:42:04 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:696:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  696 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:531:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:531:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  27080	     92	   2332	  29504	   7340	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+09:45:48 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:629:71: warning: format '%d' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+  629 |                           sprintf((char*)txd_message_buffer, "\r %d| %d| %d| %d| %d\n", i, " " ,PWM_Percent, rpm_tick_count, percent_full);
+      |                                                                      ~^                    ~~~
+      |                                                                       |                    |
+      |                                                                       int                  char *
+      |                                                                      %s
+../Core/Src/main.c:699:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  699 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:531:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:531:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  27152	     92	   2332	  29576	   7388	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+09:46:39 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:629:71: warning: format '%d' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+  629 |                           sprintf((char*)txd_message_buffer, "\r %d| %d| %d| %d| %d\n", i, "BOB" ,PWM_Percent, rpm_tick_count, percent_full);
+      |                                                                      ~^                    ~~~~~
+      |                                                                       |                    |
+      |                                                                       int                  char *
+      |                                                                      %s
+../Core/Src/main.c:699:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  699 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:531:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:531:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  27152	     92	   2332	  29576	   7388	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+09:47:27 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:699:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  699 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:531:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:531:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  27180	     92	   2332	  29604	   73a4	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+09:48:04 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:699:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  699 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:531:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:531:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  27180	     92	   2332	  29604	   73a4	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+09:50:12 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:702:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  702 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:531:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:531:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  27216	     92	   2332	  29640	   73c8	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+09:51:34 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:704:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  704 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:531:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:531:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  27216	     92	   2332	  29640	   73c8	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+10:02:10 **** Incremental Build of configuration Debug for project RPM_Test ****
+make -j4 all 
+arm-none-eabi-size  RPM_Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15788	     92	   2124	  18004	   4654	RPM_Test.elf
+Finished building: default.size.stdout
+ 
+10:04:11 **** Incremental Build of configuration Debug for project RPM_Test ****
+make -j4 all 
+arm-none-eabi-size  RPM_Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15788	     92	   2124	  18004	   4654	RPM_Test.elf
+Finished building: default.size.stdout
+ 
+10:05:44 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:704:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  704 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:531:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:531:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  27220	     92	   2332	  29644	   73cc	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 

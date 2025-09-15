@@ -1,0 +1,10 @@
+04:56:56 **** Incremental Build of configuration Debug for project UART_Test ****
+make -j4 all 
+arm-none-eabi-size  UART_Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13884	     92	   2052	  16028	   3e9c	UART_Test.elf
+Finished building: default.size.stdout
+ 
+
+04:56:57 Build Finished. 0 errors, 0 warnings. (took 511ms)
+

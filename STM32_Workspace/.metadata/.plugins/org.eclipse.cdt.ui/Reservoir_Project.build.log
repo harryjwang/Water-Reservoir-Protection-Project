@@ -1,0 +1,44 @@
+10:05:44 **** Incremental Build of configuration Debug for project Reservoir_Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:383:22: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+  383 |     setupInputs[0] = atoi(buffer);
+      |                      ^~~~
+../Core/Src/main.c:704:19: warning: unused variable 'ADC_CH9' [-Wunused-variable]
+  704 |           uint8_t ADC_CH9 = HAL_ADC_GetValue(&hadc1);
+      |                   ^~~~~~~
+../Core/Src/main.c:335:7: warning: unused variable 'TIM1_CH1_STEP' [-Wunused-variable]
+  335 |   int TIM1_CH1_STEP = 20;
+      |       ^~~~~~~~~~~~~
+../Core/Src/main.c:334:7: warning: unused variable 'TIM1_Ch1_DCVAL' [-Wunused-variable]
+  334 |   int TIM1_Ch1_DCVAL = 500;
+      |       ^~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:237:14: warning: 'DIGITS_Display' defined but not used [-Wunused-function]
+  237 |         void DIGITS_Display(uint8_t DIGIT_A, uint8_t DIGIT_B)
+      |              ^~~~~~~~~~~~~~
+../Core/Src/main.c:229:14: warning: 'HCSR04_TRIG_PULSE' defined but not used [-Wunused-function]
+  229 |         void HCSR04_TRIG_PULSE(void){
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:531:113: warning: 'PWM: | RPM: | WATER DEPTH (' directive writing 27 bytes into a region of size 22 [-Wformat-overflow=]
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |                                                                                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:531:11: note: 'sprintf' output 75 bytes into a destination of size 64
+  531 |           sprintf((char*)txd_message_buffer, "\r WALL CLOCK (hr): | ZONE/INLET: | MOTOR %%PWM: | RPM: | WATER DEPTH (%%): \n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Reservoir_Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"N:\ECE-298\STM32_Workspace\Reservoir_Project\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Reservoir_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Reservoir_Project.elf
+ 
+arm-none-eabi-size  Reservoir_Project.elf 
+arm-none-eabi-objdump -h -S Reservoir_Project.elf  > "Reservoir_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  27220	     92	   2332	  29644	   73cc	Reservoir_Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Reservoir_Project.list
+ 
+
+10:05:47 Build Finished. 0 errors, 7 warnings. (took 2s.385ms)
+

@@ -1,0 +1,10 @@
+04:36:59 **** Incremental Build of configuration Debug for project RGBLED_Test ****
+make -j4 all 
+arm-none-eabi-size  RGBLED_Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7716	     12	   1644	   9372	   249c	RGBLED_Test.elf
+Finished building: default.size.stdout
+ 
+
+04:37:00 Build Finished. 0 errors, 0 warnings. (took 469ms)
+

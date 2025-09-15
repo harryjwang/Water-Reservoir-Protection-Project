@@ -1,0 +1,10 @@
+04:55:46 **** Incremental Build of configuration Debug for project brush_motor ****
+make -j4 all 
+arm-none-eabi-size  brush_motor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11168	     12	   1716	  12896	   3260	brush_motor.elf
+Finished building: default.size.stdout
+ 
+
+04:55:47 Build Finished. 0 errors, 0 warnings. (took 514ms)
+
